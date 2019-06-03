@@ -1,0 +1,17 @@
+<style>
+
+    h1 {color :red}
+</style>
+<h1 align ='center',> Create new Resepi</h1>
+
+<form action=".", method="POST">
+    {% csrf_token %}
+    <h3>Name:<input type="text" name="name"> </h3>
+    <h3>Ingredients:</h3><textarea rows = '10' cols =20 name = 'ingredients'>Ingtradients</textarea>
+    <h3>Process</h3>
+    <textarea rows = '10' cols =20 name = 'process'>process</textarea>
+     <h3>imgurl : <input type = url name="img"></h3><br>
+
+     <input type="submit" value="Submit">
+</form>
+

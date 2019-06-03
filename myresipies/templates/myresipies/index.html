@@ -1,0 +1,20 @@
+
+<style>
+    h1 {color :Orange}
+    body {background-color:green}
+    a {color:white}
+</style>
+<h1 align ="Center", >RESIPIES INDEX PAGE</h1>
+
+{% if resipies_list %}
+
+<h1><Ul>
+    {% for resipe in resipies_list%}
+    <li><a href="/myresipies/detail_new/{{resipe.id}}"><h3>{{resipe.name.upper}}</h3></a></li>
+   {%endfor%}
+</Ul></h1>
+{%else%}
+<h1 style = "color =red">No Resipies are Availabele </h1>
+{% endif %}
+ <h1><input type = 'submit'  value ='Create Resepi'></h1>
+

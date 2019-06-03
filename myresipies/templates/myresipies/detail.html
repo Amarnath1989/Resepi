@@ -1,0 +1,31 @@
+<style>
+
+    body {background-color:orange}
+    table {color :black}
+</style>
+{% if resipies_list %}
+<table border="3px">
+    <thead >
+        <th>ID</th>
+        <th> NAME</th>
+        <th> Ingredients</th>
+        <th> Process</th>
+        <th> Image</th>
+        <th>Created Date</th>
+        <th>Updated Date</th>
+    </thead>
+    {% for resipe in resipies_list%}
+    <tr>
+        <td>{{resipe.id}}</td>
+        <td>{{resipe.name}}</td>
+        <td>{{resipe.ingredients}}</td>
+        <td>{{resipe.process}}</td>
+        <td><img src="{{resipe.image}}", alt="Image Missed",width = 100, height="100"></td>
+        <td>{{resipe.created_date}}</td>
+        <td>{{resipe.updated_date}}</td>
+    </tr>
+    {%endfor%}
+</table>
+    {%else%}
+      <h1 style = "color =red">No Resipies are Availabele </h1>
+{% endif %}

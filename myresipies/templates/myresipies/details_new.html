@@ -1,0 +1,52 @@
+<style>
+    body {color:black;
+           background-color : orange}
+    h1 {color : blue}
+</style>
+{%if resipies_list%}
+<h1 align = center style ="color :sky-blue">{{resipies_list.name.upper}}<br>
+<h1>Ingredeants:</h1><br>{{resipies_list.ingredients}}<br>
+<h1>Process</h1>{{resipies_list.process}}<br>
+<h1>Image<br></h1>
+<img src="{{resipies_list.image}}", alt="Image Missed"><br><br>
+    <h1>Created Date:</h1>{{resipies_list.created_date}}
+    <h1>Modified Date:</h1>{{resipies_list.updated_date}}
+
+   <!--<h1>Modified Date:</h1>{{resipies_list.updated_date}}-->
+
+
+{%else%}
+    <h1 color = red>No Resepi is available</h1>
+    {%endif%}
+
+
+<!--<style>
+
+    body {background-color:orange}
+    table {color :black}
+</style>v
+{% if resipies_list %}
+<table border="3px">
+    <thead >
+        <th>ID</th>
+        <th> NAME</th>
+        <th> Ingredients</th>
+        <th> Process</th>
+        <th> Image</th>
+        <th>Created Date</th>
+        <th>Updated Date</th>
+    </thead>
+    <tr>
+        <td>{{resipies_list.id}}</td>
+        <td>{{resipies_list.name}}</td>
+        <td>{{resipies_list.ingredients}}</td>
+        <td>{{resipies_list.process}}</td>
+        <td><img src="{{resipies_list.image}}", alt="Image Missed",width = 100, height="100"></td>
+        <td>{{resipies_list.created_date}}</td>
+        <td>{{resipies_list.updated_date}}</td>
+    </tr>
+
+</table>
+    {%else%}
+      <h1 style = "color =red">No Resipies are Availabele </h1>
+{% endif %}-->
